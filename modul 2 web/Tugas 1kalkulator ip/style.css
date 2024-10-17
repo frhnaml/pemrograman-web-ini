@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+  }
+  
+  body {
+    background-color: #505050;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    background: #000000;
+    padding: 25px;
+    width: 350px;
+    border-radius: 20px;
+  }
+
+#display{
+    margin-bottom: 20px;
+    padding-left: 5px;
+    width: 100%;
+    font-size: 3rem;
+    text-align: end;
+    background:transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    word-wrap: break-word; /*Memungkinkan kata-kata panjang untuk dibungkus ke baris berikutnya jika tidak muat dalam satu baris. */
+    word-break: break-all; /*Memungkinkan pemutusan kata di mana saja jika tidak muat dalam satu baris, tanpa memperhatikan batas kata. */
+}
+
+
+
+button{
+    background: #222222;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 70%;
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+}
+
+button:active,
+button:focus {
+  filter: brightness(120%);
+  color: rgb(255, 255, 255);
+  /* background: rgb(225,74,251);
+  background: linear-gradient(90deg, rgba(225,74,251,1) 0%, rgba(29,37,253,1) 50%, rgba(69,252,192,1) 100%); */
+  
+}
+
+.calc-key{
+    display: grid; /* Properti ini menetapkan elemen sebagai container grid. Semua elemen anak di dalam container ini akan mengikuti aturan grid yang ditentukan, di mana elemen-elemen ditempatkan dalam baris dan kolom yang terstruktur.
+
+    */
+    grid-template-columns: repeat(4, 1fr); /* Properti ini mendefinisikan tata letak kolom grid.
+    repeat(4, 1fr) berarti grid akan memiliki 4 kolom dengan ukuran yang sama.
+    1fr adalah unit fraksi (fraction), artinya setiap kolom akan mengambil bagian seperempat dari ruang yang tersedia, dengan setiap kolom memiliki ukuran yang sama.*/
+    grid-row-gap: 10px; /*Ada jarak vertikal sebesar 15px antara baris-baris dalam grid.*/
+    grid-column-gap: 10px; /*Ada jarak horizontal sebesar 10px antara kolom-kolom.*/
+}
+
+.btn-zero{
+    grid-column: span 2;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.oprt{
+    background-color:#ffa11d ;
+}
+.op{
+    background: #a6a6a6;
+    color: #000000;
+}

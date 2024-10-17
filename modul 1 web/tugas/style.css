@@ -1,0 +1,437 @@
+/* variables */
+/* :root{
+    --violet: rgba(138, 43, 226, 1);
+    --dark-violet: indigo;
+} */
+
+/* global */
+section{
+    padding: 50px 0 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px; /* Sesuaikan dengan tinggi navbar */
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+/* custom css style */
+/* .bg-violet{
+    background: var(--violet) !important;
+}
+
+.bg-darkviolet{
+    background: var(--dark-violet) !important;
+} */
+
+/* a.bg-violet:hover{
+    background-color: var(--dark-violet);
+}
+
+a.border-violet:hover{
+    border: 2px solid var(--dark-violet) !important;
+} */
+
+/* navigasi */
+/* .navbar-nav a{
+    text-decoration: none;
+    color: rgb(157, 68, 240);
+} */
+
+
+/* * {
+    box-sizing: border-box;
+} */
+
+.navbar{
+    background: rgb(161,11,140);
+    background: linear-gradient(90deg, rgba(161,11,140,1) 0%, rgba(0,50,161,1) 35%, rgba(0,190,140,1) 100%);
+    /* background: rgb(56,8,49);
+background: linear-gradient(90deg, rgba(56,8,49,1) 0%, rgba(13,17,27,1) 35%, rgba(0,0,0,1) 100%); */
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    
+}
+
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: rgb(251, 228, 255); /* Warna teks default */
+    transition: color 0.3s ease; /* Transisi halus hanya untuk perubahan warna teks */
+    padding: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #b15eff; /* Warna teks saat di-hover */
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease; /* Transisi halus untuk efek zoom */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Zoom logo saat di-hover (10% lebih besar) */
+}
+
+.slogan{
+    color: black;
+}
+/* .slogan-awal{
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+} */
+
+
+
+.button-awal .btn {
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Transisi halus untuk warna background, teks, dan border */
+    border: 2px solid transparent; /* Border default transparan */
+    font-weight: 650;
+    color: rgb(29, 29, 29);
+    background-color: white;
+}
+
+.button-awal .btn:hover {
+    background-color: transparent; /* Background menjadi transparan saat hover */
+    border-color: rgb(92, 21, 92); /* Menambahkan border dengan warna violet */
+    color: rgb(202, 216, 247); /* Warna teks berubah menjadi hitam saat hover */
+}
+
+#hero-section{
+    background: url(assets/bg-alat-udhcrop.jpeg) no-repeat;
+    background-size: cover;
+    height: 565px;
+    position: relative;
+    padding: 0;
+    width: 100%;
+}
+
+#hero-section::after{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(58, 40, 83, 0.6);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#hero-section .row{
+    position: relative;
+    z-index: 1;
+}
+
+#hero-section h1{
+    margin-top: 100px;
+    font-weight: 700;
+}
+
+/* values product */
+#values-product {
+    row-gap: 3rem;
+
+    .carousel-item img {
+    width: 100%; /* Pastikan gambar memenuhi lebar card */
+    height: 300px; /* Atur tinggi yang sesuai untuk setiap gambar */
+    object-fit: cover; /* Gambar akan menyesuaikan secara proporsional tanpa terdistorsi */
+    
+}
+}
+
+#values-product .card-img-top{
+    width: 460px; 
+    height: 460px; 
+    object-fit: cover;
+}
+
+
+#values-product h1{
+    font-weight: 500;
+}
+
+#list-style h1{
+    font-weight: 500;
+}
+
+.card {  
+    transition: transform 0.3s;  
+}  
+
+.card:hover {  
+    transform: scale(1.05);  
+    background: rgb(161, 11, 141);
+    background: linear-gradient(90deg, rgba(161,11,140,1) 0%, rgba(0,50,161,1) 35%, rgba(0,190,140,1) 100%); /* Efek hover dengan warna */  
+} 
+
+/* desktop */  
+@media(min-width: 992px) {  
+    /* values product */  
+    #values-product img {  
+        height: auto;  
+        width: 100%;  
+        max-height: 300px; /* Adjust height as needed */  
+        object-fit: cover; /* Ensures the image covers the area */  
+    }  
+
+    #values-product .detail {  
+        width: 100%;  
+        text-align: left; /* Align text to the left */  
+    }  
+
+    #values-product h5 {  
+        font-size: 1.5rem; /* Adjust font size for the title */  
+        margin: 0; /* Remove default margin */  
+    }  
+
+    #values-product p {  
+        font-size: 1rem; /* Adjust font size for the paragraph */  
+        margin: 0; /* Remove default margin */  
+    }  
+
+    .values-product {  
+        background-color: #ffffff; /* Light background for contrast */  
+        padding: 20px; /* Add padding around the section */  
+        border-radius: 8px; /* Rounded corners */  
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */  
+        margin-top: 100px;
+        max-width: 100%;
+        height: auto;
+    }    
+    
+    
+}  
+
+.card-img-top {  
+    height: 200px; /* Mengatur tinggi gambar */  
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */  
+}  
+
+.carousel  {  
+    max-height: 600px; /* Atur tinggi maksimal gambar di sini */  
+    max-width: 600px;
+    width: auto; /* Pastikan lebar tetap otomatis untuk mempertahankan aspek rasio */  
+    object-fit: contain; /* Memastikan gambar tidak terpotong */  
+    margin: 5rem auto; /* biar ketengah*/
+    
+}  
+
+.wrapper{
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);
+    margin: 1rem auto;
+}
+
+#list-style{
+    background: rgb(161,11,140);
+    background: linear-gradient(90deg, rgba(161,11,140,1) 0%, rgba(0,50,161,1) 35%, rgba(0,190,140,1) 100%); /* Efek hover dengan warna */  
+    background-size: cover;
+    height: fit-content;
+    position: relative;
+    padding: auto;
+    width: 100%;
+}
+
+#list-style .card{
+    
+    max-height: 700px; /* Atur tinggi maksimal gambar di sini */  
+    max-width: 600px;
+    width: auto; /* Pastikan lebar tetap otomatis untuk mempertahankan aspek rasio */  
+    object-fit: contain; /* Memastikan gambar tidak terpotong */  
+    margin: 5rem auto; /* biar ketengah*/
+    box-shadow: 5px 5px 5px 5px rgba(29, 29, 29, 0.6);
+}
+
+#list-style .carousel-inner{
+    margin-top: 0 !important;
+    margin-bottom: 0% !important;
+}
+
+.button-list-style .btn {
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Transisi halus untuk warna background, teks, dan border */
+    border: 2px solid transparent; /* Border default transparan */
+    font-weight: 650;
+    color: rgb(29, 29, 29);
+    background-color: rgb(226, 226, 226);
+}
+
+.button-list-style .btn:hover {
+    background-color: transparent; /* Background menjadi transparan saat hover */
+    border-color: rgb(92, 21, 92); /* Menambahkan border dengan warna violet */
+    color: rgb(202, 216, 247); /* Warna teks berubah saat hover */
+}
+
+
+/* price-areaaaa */
+
+#price-area{
+    /* .single-price .end-sec, .single-price .bottom-sec{
+        border-bottom: 1px solid;
+        padding: 40px 40px 22px 40px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        margin:5%;
+        padding-bottom: 5%; */
+        
+    /* .justify-content-between{
+        justify-content: space-between !important;
+    } */
+    /* .d-flex{
+        display: flex !important;
+    }
+    *,*::before, *::after{
+        box-sizing: inherit;
+    } */
+    /* } */
+
+   .judul-price{
+    background-color: #e2e2e2;
+   }
+    
+    .single-price {
+        transition: all 0.3s ease 0s;
+        padding: 40px 40px 22px 40px;
+        background-color: #ffffff;
+
+
+    }
+
+    .single-price {  
+        background-color: white; /* Warna latar belakang default */  
+        border-radius: 8px; /* Sudut melengkung */  
+        padding: 20px; /* Padding di dalam elemen */  
+        transition: background-color 0.3s ease; /* Transisi halus untuk hover */  
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */  
+    }  
+    
+    .single-price:hover {  
+        background-color: #8131db; /* Ganti dengan warna hover yang diinginkan */  
+    }  
+    
+    .single-price .top-sec {  
+        margin-bottom: 15px; /* Jarak antara bagian atas dan bawah */  
+    }  
+    
+    .single-price .end-sec ul {  
+        list-style-type: none; /* Menghilangkan bullet point */  
+        padding: 0; /* Menghilangkan padding */  
+    }  
+    
+    .single-price .end-sec button {  
+        background-color:rgb(0, 0, 0); /* Warna latar belakang tombol */  
+        color: white; /* Warna teks tombol */  
+        border: none; /* Menghilangkan border */  
+        padding: 10px 20px; /* Padding tombol */  
+        border-radius: 5px; /* Sudut melengkung tombol */  
+        cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */  
+    }  
+    
+    .single-price .end-sec button:hover {  
+        background: rgb(161,11,140);
+        background: linear-gradient(90deg, rgba(161,11,140,1) 0%, rgba(0,50,161,1) 35%, rgba(0,190,140,1) 100%); /* Efek hover dengan warna */  
+        color: rgb(0, 0, 0);
+    }  
+
+    /* Efek hover untuk bottom-sec dan end-sec */
+    /* .single-price:hover .bottom-sec,  
+    .single-price:hover .end-sec {  
+    transform: scale(1.05);  
+    background: rgb(161, 11, 141);
+    background: linear-gradient(90deg, rgba(161,11,140,1) 0%, rgba(0,50,161,1) 35%, rgba(0,190,140,1) 100%);
+    transition: transform 0.3s, background 0.3s; /* Tambahkan transisi juga untuk background */
+    /* } */ 
+}
+
+#price-area{
+    background-color: #e2e2e2;
+}
+
+
+/* contacttttt */
+#contact{
+    
+
+    /* margin-bottom: 0; */
+    background: #e2e2e2;
+    
+    h2 {  
+        font-weight: bold;  
+    }  
+    
+    h5 {  
+        margin-top: 20px;  
+        font-weight: bold;  
+    }  
+    
+    .btn-primary {  
+        background-color: #007bff;  
+        border: none;  
+    }  
+    
+    .btn-primary:hover {  
+        background-color: #0056b3;  
+    }  
+
+    .form-group{
+        margin: 10px; /* Memberi jarak di luar kotak input */
+        /* padding: 10px; Memberi jarak di dalam kotak input */
+    }
+
+    .form-message{
+        width: auto;
+        height: 150px;
+    }
+
+    textarea{
+        height: 90%; /* Mengatur tinggi textarea agar sesuai dengan tinggi kolom */  
+        min-height: 90px; /* Atur tinggi minimum sesuai kebutuhan */  
+        
+    }
+
+    button{
+        margin-left: 10px;
+    }
+
+    button {  
+        background-color:rgb(0, 0, 0) !important; /* Warna latar belakang tombol */  
+        color: white; /* Warna teks tombol */  
+        border: none; /* Menghilangkan border */  
+        padding: 10px 20px; /* Padding tombol */  
+        border-radius: 5px; /* Sudut melengkung tombol */  
+        cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */  
+    }  
+
+    button:hover {  
+        background: rgb(161,11,140);
+        background: linear-gradient(90deg, rgba(161,11,140,1) 0%, rgba(0,50,161,1) 35%, rgba(0,190,140,1) 100%); /* Efek hover dengan warna */  
+        color: rgb(0, 0, 0);
+    }  
+}
+
+
+
+/* footerrrrr */
+#footer{
+    margin-top: 0;
+    .col{
+        font-size: 90%;
+    }
+}
+
+.section-gap{
+    padding: 120px 0;
+}
+
