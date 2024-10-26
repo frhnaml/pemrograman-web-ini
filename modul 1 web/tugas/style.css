@@ -357,6 +357,98 @@ background: linear-gradient(90deg, rgba(56,8,49,1) 0%, rgba(13,17,27,1) 35%, rgb
 
 #price-area{
     background-color: #e2e2e2;
+    
+}
+
+/* Operating Hourrrrr */
+#operating-hours {  
+    color: rgb(255, 255, 255); /* Text color */  
+    text-align: center; /* Center text */  
+    background: url(assets/bg-jamOperasional.jfif) no-repeat;
+    background-size: cover;
+    height: 800px;
+    /* position: relative; */
+    position: relative; /* Untuk positioning overlay */  
+    justify-content: center;
+}  
+
+  .title{
+    position: relative; /* Untuk menempatkan teks di atas overlay */  
+    z-index: 2; /* Pastikan teks di atas overlay */ 
+  }
+  
+  .logo {  
+    width: 150px; /* Adjust logo size */  
+    z-index: 2;
+  }  
+  
+  .days {  
+    font-size: 20px; /* Font size for days */  
+    margin: 5px 0; /* Margin for spacing */ 
+    z-index: 2; 
+  }  
+  
+  .hours {  
+    font-size: 24px; /* Font size for hours */  
+    font-weight: bold; /* Bold for emphasis */  
+    margin: 5px 0; /* Margin for spacing */
+    z-index: 2;  
+  }  
+  
+  .closed {  
+    font-size: 20px; /* Font size for closed message */  
+    margin-top: 20px; /* Margin for spacing */  
+    font-style: italic; /* Italic for emphasis */  
+    z-index: 2;
+  }
+
+  .operation-brand img{
+    transition: transform 0.3s ease;
+  }
+
+  .operation-brand img:hover{
+    transform: scale(1.1);
+  }
+
+.overlay {  
+    content: '';  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay hitam dengan transparansi */  
+    z-index: 1; /* Pastikan overlay di atas gambar */  
+}  
+
+  @media (max-width: 768px) {  
+    .logo {  
+        width: 120px; /* Smaller logo for mobile */  
+    }  
+
+    .days, .hours, .closed {  
+        font-size: 18px; /* Adjust font size for smaller screens */  
+    }  
+} 
+
+.border-box {  
+    border: 2px solid rgb(255, 255, 255); /* Border putih */  
+    border-radius: 5px; /* Sudut melengkung */  
+    padding: 20px; /* Spasi di dalam border */  
+    background-color: rgba(0, 0, 0, 0.4); /* Latar belakang semi-transparan untuk konten */  
+    max-width: 400px; /* Lebar maksimum border box */  
+    width: 100%; /* Lebar 100% untuk responsif */  
+    text-align: center; /* Rata tengah teks di dalam box */  
+}  
+
+#operational-status{
+  position: relative; 
+  z-index: 2;
+  background-color:transparent; 
+  padding: 10px;
+  border: 1px solid #696969;
+  font-size: 16px;
+  color: #bbbbbb;
 }
 
 
