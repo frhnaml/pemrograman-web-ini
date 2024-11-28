@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigasi Bar -->
+
+    <head></head>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo-removebg-preview.png" width="80" alt="Logo">
+            </a>
+            <button class="navbar-toggler" onclick="toggleMenu()">
+                ☰
+            </button>
+            <div class="navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#values-product">Service</a>
+                    <a class="nav-link" href="#list-style">Style</a>
+                    <a class="nav-link" href="#price-area">Price</a>
+                    <a class="nav-link" href="#operating-hours">Operating Hours</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#footer">About us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+        function toggleMenu() {
+            const navbarCollapse = document.getElementById("navbarNavAltMarkup");
+            navbarCollapse.classList.toggle("show");
+        }
+    </script>
+
+    <!-- Hero Section -->
+    <section id="hero-section">
+        <div class="container">
+            <div class="row">
+                <h1>
+                    Elevate Every Moment Where Every Style Tells Your Story
+                </h1>
+                <p>
+                    Every technique we deliver, every piece we create, is a reflection of the stories that define you.
+                    <br>
+                    With a firm commitment to craftsmanship and professionalism, we deliver beauty and elegance,
+                    offering a style that not only complements but also elevates your true self. Express your style and
+                    enjoy results that meet your expectations.
+                </p>
+                <div class="button-awal">
+                    <a href="#">SEE MORE CHANGES</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Values Product Section -->
+    <section id="values-product">
+        <div class="container">
+            <div class="row">
+                <div class="title text-center">
+                    <h1>What We Can Do for You</h1>
+                    <p>We are very much in pursuit of the maximum and best results</p>
+                </div>
+
+
+
+                <!-- Card 1 -->
+                <div class="card" id="ServiceCards">
+                    <img src="assets/alat.jpeg" alt="Quality Tools">
+                    <div class="card-body">
+                        <h5>Quality Tools</h5>
+                        <p>
+                            We only use high-quality tools for every service we offer. From scissors to razors, all our
+                            equipment is carefully selected to ensure the best results and a safe, comfortable
+                            experience for our customers.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card" id="ServiceCards">
+                    <img src="assets/hairstyle.jpeg" alt="Stylish Hair Cutting">
+                    <div class="card-body">
+                        <h5>Stylish Hair Cutting</h5>
+                        <p>
+                            Get a stylish haircut that follows the latest trends at our barbershop. Our team of
+                            professional hairstylists is ready to offer the best style advice for you.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card" id="ServiceCards">
+                    <img src="assets/bbrshop-bdyMsg.jpeg" alt="Effective Body Massage">
+                    <div class="card-body">
+                        <h5>Effective Body Massage</h5>
+                        <p>
+                            Experience maximum relaxation with our effective body massage service. Our experienced
+                            therapists use proven massage techniques to relieve muscle tension and improve blood
+                            circulation.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card" id="ServiceCards">
+                    <img src="assets/ckr-janggut.jpeg" alt="Beard Trimming">
+                    <div class="card-body">
+                        <h5>Beard Trimming</h5>
+                        <p>
+                            Enjoy our professional and precise Beard Trimming service. We ensure every trim is neat and
+                            matches your desired style.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- list of style -->
+    <section id="list-style">
+        <div class="container">
+            <div class="row">
+
+                <!-- Title Section -->
+                <div class="title text-center">
+                    <h1>List of Style</h1>
+                    <p>Interesting references based on the latest trends</p>
+                </div>
+
+                <!-- Card Container -->
+                <div class="card-container">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <div class="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/womanfix.jpeg" alt="Woman Style 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/woman3.jpeg" alt="Woman Style 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/woman6.jpeg" alt="Woman Style 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control prev">&lt;</button>
+                            <button class="carousel-control next">&gt;</button>
+                        </div>
+                        <div class="card-body">
+                            <h5>Woman</h5>
+                            <p>
+                                Discover a variety of elegant and modern women's hairstyles. From chic short cuts to
+                                graceful long locks, find inspiration to look stunning for any occasion.
+                            </p>
+                            <a href="#" class="btn">Find Out</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <div class="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/man2.jpeg" alt="Man Style 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/man3.jpeg" alt="Man Style 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/man5.jpeg" alt="Man Style 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control prev">&lt;</button>
+                            <button class="carousel-control next">&gt;</button>
+                        </div>
+                        <div class="card-body">
+                            <h5>Man</h5>
+                            <p>
+                                Explore men's hairstyles that define confidence and style. From classic cuts to bold and
+                                trendy looks, find the perfect hairstyle that suits your personality.
+                            </p>
+                            <a href="#" class="btn">Find Out</a>
+                        </div>
+                    </div>
+                </div> <!-- End of Card Container -->
+            </div>
+        </div>
+    </section>
+
+    <!-- pricee -->
+
+    <section id="price-area">
+        <div class="container">
+            <div class="row">
+                <div class="judul-price">
+                    <div class="title">
+                        <h1 class="heading">Price List</h1>
+                        <p class="description">
+                            Discover a range of services and competitive prices at our barber shop. From classic
+                            haircuts to modern grooming treatments, we offer high-quality services at affordable rates.
+                            Choose the package that suits your needs and experience the difference with our professional
+                            touch.
+                        </p>
+                    </div>
+                </div>
+                <div class="price-row">
+                    <!-- Basic Cut -->
+                    <div class="single-price">
+                        <div class="top-sec">
+                            <h4>Basic Cut</h4>
+                            <p>A quick and efficient service offering basic haircuts and styling, suitable for all hair
+                                types and perfect for everyday looks.</p>
+                            <h1>Rp. 30.000</h1>
+                        </div>
+                        <div class="bottom-sec">
+                            <p>Man / Woman</p>
+                        </div>
+                        <div class="end-sec">
+                            <ul>
+                                <li>Standard haircut</li>
+                                <li>Simple styling</li>
+                                <li>Style consultation</li>
+                                <li>Complimentary drink while waiting</li>
+                            </ul>
+                            <button class="price-btn">PURCHASE PLAN</button>
+                        </div>
+                    </div>
+                    <!-- Premium Grooming -->
+                    <div class="single-price">
+                        <div class="top-sec">
+                            <h4>Premium Grooming</h4>
+                            <p>Enjoy a refined and professional look with a comprehensive grooming service that includes
+                                a haircut, beard trimming, and styling.</p>
+                            <h1>Rp. 40.000</h1>
+                        </div>
+                        <div class="bottom-sec">
+                            <p>Man</p>
+                        </div>
+                        <div class="end-sec">
+                            <ul>
+                                <li>Premium haircut</li>
+                                <li>Beard grooming</li>
+                                <li>Advanced styling</li>
+                                <li>Complimentary hair care products</li>
+                            </ul>
+                            <button class="price-btn">PURCHASE PLAN</button>
+                        </div>
+                    </div>
+                    <!-- Ultimate Experience -->
+                    <div class="single-price">
+                        <div class="top-sec">
+                            <h4>Ultimate Experience</h4>
+                            <p>An exclusive package for those seeking professional haircuts and skincare treatments,
+                                complete with a relaxing massage for a rejuvenating experience.</p>
+                            <h1>Rp. 55.000</h1>
+                        </div>
+                        <div class="bottom-sec">
+                            <p>Man / Woman</p>
+                        </div>
+                        <div class="end-sec">
+                            <ul>
+                                <li>Haircut and styling</li>
+                                <li>Beard and mustache grooming</li>
+                                <li>Facial treatment</li>
+                                <li>Complimentary drinks and snacks</li>
+                                <li>Hair wash</li>
+                            </ul>
+                            <button class="price-btn">PURCHASE PLAN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- operating hour -->
+    <!-- Operating Hours Section -->
+    <section id="operating-hours">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="judul-hour">
+                    <div class="title">
+                        <h1>Operating Hours</h1>
+                        <p>We are ready to serve you according to operating hours</p>
+                    </div>
+                </div>
+                <div class="border-box">
+                    <div class="title">
+                        <a class="operation-brand" href="#">
+                            <img src="assets/logo-removebg-preview.png" alt="Logo" class="logo">
+                        </a>
+                        <h1>OPEN</h1>
+                        <p class="days">TUESDAY - FRIDAY</p>
+                        <p class="hours">08:00 - 22:00</p>
+                        <p class="days">SATURDAY</p>
+                        <p class="hours">10:00 - 22:00</p>
+                        <p class="closed">CLOSED MONDAY</p>
+                    </div>
+                    <div id="operational-status"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="judul-price text-center ">
+                    <div class="title">
+                        <h1>
+                            We’re Here to Help You Look Your Best!
+                        </h1>
+                        <p class="opacity-85">
+                            Whether you have questions or need to book an appointment, we're just a message away. Your
+                            satisfaction is our top priority, and we love connecting with our clients.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col">
+                        <h5>VISIT OUR OFFICE</h5>
+                        <p>tunggulwulung,<br>Malang,<br>Jawa Timur,<br>Indonesia</p>
+                    </div>
+                    <div class="col">
+                        <h5>LET'S CALL US</h5>
+                        <p>Phone 01: 082-xxx-xxx-xxx<br>Phone 02: 082-xxx-xxx-xxx<br>FAX: 082-xxx-xxx-xxx</p>
+                    </div>
+                    <div class="col">
+                        <h5>LET'S EMAIL US</h5>
+                        <p>hello@gmail.com<br>okeeee@gmail.com<br>hooh@gmail.com</p>
+                    </div>
+                    <div class="col">
+                        <h5>CUSTOMER SUPPORT</h5>
+                        <p>support@gmail.com<br>emergencysupp@gmail.com<br>extremesupp@gmail.com</p>
+                    </div>
+                </div>
+
+                <form class="form-ini row mt-4">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter email address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter your subject" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-message form-group">
+                            <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit">SEND MESSAGE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5>About Us</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore dolore magna aliqua.</p>
+                </div>
+                <div class="col">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>Follow Us</h5>
+                    <p>Let us be social</p>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="roww">
+                <p>by frhn</p>
+                <div class="text-center ">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

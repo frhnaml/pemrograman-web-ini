@@ -1,0 +1,863 @@
+General styles
+section{
+     padding: 50px 0 100px; /*buat nyesuaiin navbar */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px; /* Sesuaikan dengan tinggi navbar (buat nyesuaiin navbar) */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+* {  
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam lebar total */  
+}
+
+/* Navbar styles */
+.navbar {
+    background: rgb(161,11,140);
+    background: linear-gradient(90deg, rgba(161,11,140,1) 0%, rgba(0,50,161,1) 35%, rgba(0,190,140,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky !important; 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Transisi halus untuk efek zoom */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Zoom logo saat di-hover (10% lebih besar) */
+}
+
+.navbar-toggler {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-collapse {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #4ea6ff;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .navbar-collapse.show {
+        display: flex;
+    }
+
+    .navbar-nav {
+        gap: 10px;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+
+/* Hero section styles */
+#hero-section {
+    background: url(assets/bg-alat-udhcrop.jpeg) no-repeat;
+    background-size: cover;
+    height: 565px;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    color: white;
+}
+
+#hero-section::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(58, 40, 83, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+
+#hero-section .container {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    
+}
+
+#hero-section h1 {
+    margin-top: 100px;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+#hero-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+#hero-section .button-awal {
+    margin-top: 20px;
+}
+
+#hero-section .button-awal a {
+    display: inline-block;
+    background-color: white;
+    color: #3a2853;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#hero-section .button-awal a:hover {
+    background-color: #3a2853;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    #hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    #hero-section p {
+        font-size: 0.9rem;
+    }
+
+    #hero-section .button-awal a {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Values Product Section */  
+#values-product {  
+    padding: 50px 20px;  
+    background-color: #f9f9f9;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+}  
+
+#values-product .title {  
+    margin-bottom: 40px;  
+    text-align: center;  
+    z-index: 1;
+    width: 100%;
+}  
+
+#values-product .title h1 {  
+    font-size: 2.5rem;  
+    font-weight: 700;  
+    margin-bottom: 10px;  
+    color: #333;  
+}  
+
+#values-product .title p {  
+    font-size: 1rem;  
+    color: #555;  
+}  
+
+#values-product .row {  
+    display: flex;  
+    flex-wrap: wrap;  
+    gap: 20px;  
+    justify-content: center; /* Center cards in the row */  
+    margin-top: 0;
+}  
+
+/* Card Styling */  
+#values-product .card {  
+    background: #fff;  
+    border-radius: 8px;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    overflow: hidden;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  
+    width: calc(50% - 20px); /* Two cards per row */  
+    max-width: 500px;  
+}  
+
+#values-product .card:hover {  
+    transform: scale(1.05);  
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  
+}  
+
+#values-product .card img {  
+    width: 100%;  
+    height: 300px;  
+    object-fit: cover;  
+}  
+
+#values-product .card-body {  
+    padding: 20px;  
+    text-align: center;  
+}  
+
+#values-product .card-body h5 {  
+    font-size: 1.2rem;  
+    font-weight: 600;  
+    margin-bottom: 10px;  
+    color: #333;  
+}  
+
+#values-product .card-body p {  
+    font-size: 0.9rem;  
+    color: #666;  
+    line-height: 1.5;  
+}  
+
+/* Responsive Design */  
+@media (max-width: 768px) {  
+    #values-product .card {  
+        width: 100%; /* Full width on smaller screens */  
+    }  
+
+    #values-product .title h1 {  
+        font-size: 2rem;  
+    }  
+
+    #values-product .card img {  
+        height: 250px; /* Adjust image height for smaller screens */  
+    }  
+}  
+
+
+/* Container */  
+#list-style {  
+    background: linear-gradient(90deg, rgba(161,11,140,1) 0%, rgba(0,50,161,1) 35%, rgba(0,190,140,1) 100%);  
+    padding: 2rem 0;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    max-width: 100%;
+}  
+
+#list-style .row{
+    display: flex;  
+    flex-wrap: wrap;  
+    gap: 20px;  
+    justify-content: center; /* Center cards in the row */  
+    margin-top: 0;
+}
+
+/* Title */  
+#list-style .title {  
+    margin-bottom: 40px;  
+    text-align: center;  
+    z-index: 1;  
+    width: 100%;  
+    max-width: 100%;
+}  
+
+#list-style .title h1{
+    font-size: 2.5rem;  
+    font-weight: 700;  
+    margin-bottom: 10px;  
+    color: #000000;  
+}
+
+#list-style .title p{
+    font-size: 1rem;  
+    color: #0e0e0e;  
+}
+
+/* Card */  
+#list-style .card-container {  
+    display: flex;  /* Changed from a row div to a .card-container */  
+    justify-content: center; /* Center cards horizontally */  
+    max-width: 100%;
+}  
+
+#list-style .card {  
+    margin: 0 1rem; /* Adjust margin to space cards */  
+    max-width: 600px; /* Keep card's max width */  
+    background: #fff;  
+    border-radius: 8px;  
+    overflow: hidden;  
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  
+}  
+
+/* Carousel styles remain the same */  
+#list-style .carousel {  
+    position: relative;  
+    width: 100%;  
+    height: 300px;  
+}  
+
+#list-style .carousel-inner {  
+    display: flex;  
+    transition: transform 0.5s ease-in-out;  
+}  
+
+#list-style .carousel-item {  
+    min-width: 100%;  
+    height: 100%;  
+    object-fit: cover;  
+}  
+
+#list-style .carousel img {  
+    width: 100%;  
+    height: 100%;  
+    object-fit: cover;  
+}  
+
+#list-style .carousel-control {  
+    position: absolute;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    background: rgba(0, 0, 0, 0.5);  
+    color: #fff;  
+    border: none;  
+    font-size: 2rem;  
+    padding: 0.5rem;  
+    cursor: pointer;  
+    z-index: 1;  
+}  
+
+#list-style .carousel-control.prev {  
+    left: 0.5rem;  
+}  
+
+#list-style .carousel-control.next {  
+    right: 0.5rem;  
+}  
+
+/* Card Body */  
+#list-style .card-body {  
+    padding: 1.5rem;  
+}  
+
+#list-style .card-body h5 {  
+    font-size: 1.5rem;  
+    margin-bottom: 0.5rem;  
+}  
+
+#list-style .card-body p {  
+    font-size: 1rem;  
+    margin-bottom: 1rem;  
+    color: #333;  
+}  
+
+/* Button */  
+#list-style .btn {  
+    display: inline-block;  
+    padding: 0.5rem 1.5rem;  
+    font-size: 1rem;  
+    font-weight: 600;  
+    color: #fff;  
+    background-color: #8a2be2;  
+    border: none;  
+    border-radius: 4px;  
+    text-decoration: none;  
+    transition: background-color 0.3s ease;  
+}  
+
+#list-style .btn:hover {  
+    background-color: #5d1c91;  
+}
+
+
+
+/* Container for Price Area */
+#price-area {
+    background-color: #e2e2e2;
+    padding: 50px 20px;
+    display: flex;  
+    flex-direction: column;  
+    align-items: center; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Title Section */
+.judul-price {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Price List */
+.price-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Single Price Card */
+.single-price {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    max-width: 350px;
+    flex: 1;
+}
+
+.single-price:hover {
+    transform: scale(1.05);
+    background-color: #8131db;
+    color: #fff;
+}
+
+.single-price .top-sec h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.single-price .top-sec p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.single-price .top-sec h1 {
+    font-size: 24px;
+    color: #000;
+}
+
+.bottom-sec p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.end-sec ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.end-sec ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.price-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.price-btn:hover {
+    background: linear-gradient(90deg, rgba(161, 11, 140, 1) 0%, rgba(0, 50, 161, 1) 35%, rgba(0, 190, 140, 1) 100%);
+    color: black;
+}
+
+
+
+/* operating hour */
+/* General styles for Operating Hours section */
+#operating-hours {
+    color: rgb(255, 255, 255); /* Text color */  
+    text-align: center; /* Center text */  
+    background: url(assets/bg-jamOperasional.jfif) no-repeat;
+    background-size: cover;
+    height: 800px;
+    /* position: relative; */
+    position: relative; /* Untuk positioning overlay */  
+    justify-content: center;
+  }
+
+  #operating-hours .container{
+    justify-content: center;
+  }
+
+  #operating-hours .row {  
+    /* display: flex;   */
+    flex-wrap: wrap;  
+    gap: 20px;  
+    justify-content: center; /* Center cards in the row */  
+    margin-top: 0;
+    align-items: center;  
+    }
+  
+  #operating-hours .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    
+  }
+  
+  #operating-hours .judul-hour {
+    position: relative;  
+    z-index: 2;  
+    margin-bottom: 100px;  
+    margin-top: auto;
+    /* padding-top: 0; */
+    justify-content: center;
+    text-align: center; /* Memastikan teks berpusat secara horizontal */  
+  }
+  
+  #operating-hours .judul-hour .title h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: 50px; /* Menambah jarak dari atas halaman */ 
+    margin: 0;
+  }
+  
+  #operating-hours .judul-hour .title p {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin: 0;
+    
+  }
+  
+  .border-box {
+    position: relative;
+    z-index: 2;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    max-width: 400px;
+    text-align: center;
+    
+  }
+  
+  .border-box .title {
+    margin-bottom: 20px;
+  }
+  
+  .border-box .logo {
+    width: 150px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .border-box .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  .border-box .days {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  
+  .border-box .hours {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .border-box .closed {
+    font-size: 20px;
+    margin-top: 20px;
+    font-style: italic;
+  }
+  
+  #operational-status {
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid #696969;
+    font-size: 16px;
+    color: #bbbbbb;
+  }
+  
+  @media (max-width: 768px) {
+    .border-box .logo {
+      width: 120px;
+    }
+  
+    .border-box .days,
+    .border-box .hours,
+    .border-box .closed {
+      font-size: 18px;
+    }
+  }
+
+
+
+  /* Contact Section Styles */
+#contact {
+    background-color: #e2e2e2;
+    padding: 60px 0;
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    max-width: 100%;
+  }
+  
+  #contact .container {
+    justify-content: center;
+  }
+  
+  #contact .judul-price {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #contact .judul-price .title {
+    text-align: center;
+  }
+  
+  #contact h1 {
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+  }
+  
+  #contact p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+  }
+  
+  #contact .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap; 
+    gap: 20px;  
+    justify-content: center; /* Center cards in the row */  
+    margin-top: 0;
+    align-items: center;  
+  }
+  
+  #contact .col {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  #contact h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #contact .form-ini {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  #contact .form-group {
+    margin: 10px 0;
+  }
+  
+  #contact .form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #contact .form-message {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  #contact textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  #contact button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #contact button:hover {
+    background: linear-gradient(90deg, rgba(161, 11, 140, 1) 0%, rgba(0, 50, 161, 1) 35%, rgba(0, 190, 140, 1) 100%);
+    color: black;
+  }
+  
+  @media (max-width: 768px) {
+    #contact .row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #contact .col {
+      margin-bottom: 20px;
+    }
+  
+    #contact .form-ini {
+      flex-direction: column;
+    }
+  }
+  
+
+
+  /* Footer Styles */
+#footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  #footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #footer .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    
+  }
+
+  /* #footer .roww{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  } */
+  
+  #footer .col {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  #footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  #footer p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  #footer .list-unstyled {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #footer .list-unstyled li {
+    margin-bottom: 10px;
+  }
+  
+  #footer .list-unstyled a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  #footer .social-icon {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  #footer .social-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  #footer .text-center {
+    margin-top: 20px;
+    
+  }
+  
+  @media (max-width: 768px) {
+    #footer .row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #footer .col {
+      margin-bottom: 20px;
+    }
+  }
